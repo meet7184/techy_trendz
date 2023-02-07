@@ -1,0 +1,33 @@
+
+{
+  "intro1_title":"Online Cart",
+  "intro1_subtitle": "Select and memorize your future purchases with smart online shopping cart.",
+  "intro2_title":"Sales And Gifts",
+  "intro2_subtitle":"Holiday sales,birthday gifts, various choice and categories.",
+  "intro3_title":"Client Reviews",
+  "intro3_subtitle":"Honest Feedbackes  from our clients, happy clients-happy us",
+  "next":"Next",
+  "start":"Start",
+  "welcomeback":"Welcome Back!",
+  "login_title":"Let’s login for explore continues",
+  "email_phone":"Email or Phone Number",
+  "emailhint":"Enter your Email Address",
+  "password":"Password",
+  "password_hint":"Enter your Password",
+  "forgotpassword":"Forgot Passoword?",
+  "view":"View",
+  "hide":"Hide",
+  "signin":"Sign in",
+  "youcan_connect_with":"You can Connect with",
+  "dont_have_account":"Don’t have account ?",
+  "signup":"Sign Up",
+  "username":"Username",
+  "username_hint":"Enter your username",
+  "email":"Email",
+  "phonenumber":"Phone Number",
+  "phonenumber_hint":"Enter your Phone Number",
+  "already_have_account":"Already have an account ?",
+  "verification":"Verification",
+  "verify":"Verifier"
+
+}

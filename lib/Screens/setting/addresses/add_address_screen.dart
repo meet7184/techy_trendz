@@ -63,9 +63,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
-                              height: Responsive.height(1, context),
-                            ),
+                            SizedBox(height: Responsive.height(1, context)),
                             Text(
                               "ADD ADDRESSES",
                               style: TextStyle(

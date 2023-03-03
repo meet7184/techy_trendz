@@ -58,9 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            height: Responsive.height(3, context),
-                          ),
+                          SizedBox(height: Responsive.height(3, context)),
                           Text(
                             TKeys.welcomeback.translate(context),
                             style: TextStyle(
@@ -68,9 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     MediaQuery.of(context).size.width * 0.065,
                                 fontFamily: "intersemibold"),
                           ),
-                          SizedBox(
-                            height: Responsive.height(1, context),
-                          ),
+                          SizedBox(height: Responsive.height(1, context)),
                           Text(
                             TKeys.login_title.translate(context),
                             style: TextStyle(

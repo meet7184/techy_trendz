@@ -153,7 +153,7 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                     return const Center(child: CircularProgressIndicator());
                   }
                   print(
-                      "---------------> ${controller.productDetailCategoryList.length}");
+                      "-------------> ${controller.productDetailCategoryList.length}");
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: ListView(

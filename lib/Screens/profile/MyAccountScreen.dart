@@ -553,9 +553,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                height: Responsive.height(5, context),
-                              ),
+                              SizedBox(height: Responsive.height(5, context)),
                               GestureDetector(
                                 onTap: () {
                                   showDialog(

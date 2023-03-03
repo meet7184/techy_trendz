@@ -33,7 +33,7 @@ class AppPrefs {
   void setUser(UserModel? userModel) {
     appController.userModel = userModel;
     if (userModel != null) {
-      print("===========================================> $userModel");
+      print("========================================> $userModel");
       _set(_user, jsonEncode(userModel.toJson()));
     } else {
       _set(_user, userModel);

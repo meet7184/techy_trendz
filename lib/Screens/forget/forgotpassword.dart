@@ -114,9 +114,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                                   size: 20,
                                 ),
                               ),
-                              SizedBox(
-                                height: Responsive.height(7, context),
-                              ),
+                              SizedBox(height: Responsive.height(7, context)),
                               CommonSubmitButton(
                                   text: 'Continue',
                                   onTap: () async {

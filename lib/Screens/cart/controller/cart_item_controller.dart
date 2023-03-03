@@ -16,7 +16,7 @@ class CartItemController extends GetxController {
       isLoading = true;
       final response = await userRepo.cartItemList();
       list = response.items;
-      print("--------------> ${list.length}");
+      print("---------------> ${list.length}");
       addCartItemModel = response;
       return true;
     } catch (e, stackTrace) {

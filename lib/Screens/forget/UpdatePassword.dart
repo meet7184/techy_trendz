@@ -60,9 +60,10 @@ class _UpdatePasswordState extends State<UpdatePassword> {
                             Text(
                               "Reset Password",
                               style: TextStyle(
-                                  fontSize:
-                                      MediaQuery.of(context).size.width * 0.065,
-                                  fontFamily: "poppinssemibold"),
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.065,
+                                fontFamily: "poppinssemibold",
+                              ),
                             ),
                             SizedBox(
                               height: Responsive.height(1, context),

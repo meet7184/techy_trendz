@@ -104,7 +104,7 @@ class _LoginVerificationScreenState extends State<LoginVerificationScreen> {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 100),
+                        SizedBox(height: 100),
                         CommonSubmitButton(
                             text: 'Verify',
                             onTap: () async {

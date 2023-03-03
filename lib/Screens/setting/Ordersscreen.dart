@@ -66,12 +66,11 @@ class _OrderScreenState extends State<OrderScreen> {
                                     ),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
-                                      child: Image.asset(
-                                        'assets/powerbank.png',
-                                        fit: BoxFit.cover,
-                                        width: Responsive.width(30, context),
-                                        height: Responsive.height(15, context),
-                                      ),
+                                      child: Image.asset('assets/powerbank.png',
+                                          fit: BoxFit.cover,
+                                          width: Responsive.width(30, context),
+                                          height:
+                                              Responsive.height(15, context)),
                                     ),
                                   ),
                                   SizedBox(

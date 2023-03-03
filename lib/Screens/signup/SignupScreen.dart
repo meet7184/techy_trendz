@@ -98,9 +98,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                   MediaQuery.of(context).size.width * 0.045,
                               fontFamily: "intermedium"),
                         ),
-                        SizedBox(
-                          height: Responsive.height(1, context),
-                        ),
+                        SizedBox(height: Responsive.height(1, context)),
                         CustomTextField2(
                           validator: (val) =>
                               val!.trim().isEmpty ? "field required" : null,

@@ -2,14 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
 import 'package:loader_overlay/loader_overlay.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:techytrendz/Utils/global.dart';
 import '../../../../../../core/repository/user_repository.dart';
-import '../../../Utils/app_prefs.dart';
+import '../../../util/app_prefs.dart';
 import '../../../core/network/dio/dio_extension.dart';
 import '../../../core/utils/flitter_toast.dart';
-import '../../dashboar/MainScreen.dart';
-import '../Loginscreen.dart';
 
 class LoginController extends GetxController {
   final userRepo = GetIt.I.get<UserRepository>();

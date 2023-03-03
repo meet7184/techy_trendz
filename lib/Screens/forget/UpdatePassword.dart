@@ -183,9 +183,7 @@ class _UpdatePasswordState extends State<UpdatePassword> {
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              height: Responsive.height(2, context),
-                            ),
+                            SizedBox(height: Responsive.height(2, context)),
                             Text(
                               "Confirm Password",
                               style: TextStyle(

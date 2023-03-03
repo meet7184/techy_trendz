@@ -10,7 +10,7 @@ import 'package:techytrendz/Screens/favorite/model/favorite_model.dart';
 import 'package:techytrendz/Screens/home/model/top_rated_products_model.dart';
 import 'package:techytrendz/Screens/home/model/recommended_products_model.dart';
 import 'package:techytrendz/Screens/home/model/shop_by_category_model.dart';
-import 'package:techytrendz/Utils/global.dart';
+import 'package:techytrendz/util/global.dart';
 import 'package:techytrendz/core/network/dio/dio_extension.dart';
 import '../../../Screens/cart/model/add_cart_item_model.dart';
 import '../../../Screens/drawer/model/drawer_products_detail_model.dart';
@@ -216,6 +216,7 @@ class DioApiClient extends ApiClient {
       "product_id": productId,
     };
     final response = await _dioClient.post(UrlPath.productList, data: param);
+    log(" log =======> ${response.data}");
     return ProductsDetailListModel.fromJson(response.data);
   }
 

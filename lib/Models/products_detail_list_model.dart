@@ -41,14 +41,14 @@ class ProductList {
   String title;
   String price;
   String permalink;
-  String? image;
+  dynamic image;
 
   factory ProductList.fromJson(Map<String, dynamic> json) => ProductList(
         id: json["id"],
         title: json["title"],
         price: json["price"],
         permalink: json["permalink"],
-        image: json["image"] ?? "",
+        image: json["image"],
       );
 
   Map<String, dynamic> toJson() => {

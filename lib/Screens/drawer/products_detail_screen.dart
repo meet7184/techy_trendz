@@ -418,7 +418,8 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                                 .map((index, value) => MapEntry(
                                     index,
                                     Padding(
-                                      padding: const EdgeInsets.only(right: 20),
+                                      padding: const EdgeInsets.only(
+                                          right: 20, left: 10),
                                       child: Container(
                                         width: 170,
                                         decoration: BoxDecoration(
@@ -448,23 +449,18 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                                                         BorderRadius.circular(
                                                             11),
                                                   ),
-                                                  child:
-                                                      // controller
-                                                      //             .productDetailCategoryList[
-                                                      //                 index]
-                                                      //             .image !=
-                                                      //         false
-                                                      //     ?
-                                                      Image.network(
+                                                  child: controller
+                                                              .productDetailCategoryList[
+                                                                  index]
+                                                              .image ==
+                                                          false
+                                                      ? Container()
+                                                      : Image.network(
                                                           controller
                                                               .productDetailCategoryList[
                                                                   index]
                                                               .image!,
-                                                          fit: BoxFit.cover)
-                                                  // : Container(
-                                                  //     color: Colors.red,
-                                                  //   ),
-                                                  ),
+                                                          fit: BoxFit.cover)),
                                             ),
                                             const SizedBox(height: 15),
                                             Padding(

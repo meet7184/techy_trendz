@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:techytrendz/Screens/favorite/controller/favorite_controller.dart';
 import 'package:techytrendz/Screens/home/controller/home_controller.dart';
 import 'package:techytrendz/Screens/drawer/drawer_data_screen.dart';
-import 'package:techytrendz/Utils/app_controller.dart';
+import 'package:techytrendz/util/app_controller.dart';
 import '../../Screens/cart/controller/cart_item_controller.dart';
 import '../../Screens/forget/controller/forget_controller.dart';
 import '../../Screens/drawer/controller/drawer_data_controller.dart';

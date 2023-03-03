@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
 import 'package:techytrendz/Screens/favorite/model/favorite_model.dart';
-import 'package:techytrendz/Utils/global.dart';
+import 'package:techytrendz/util/global.dart';
 import '../../../core/repository/user_repository.dart';
 
 class FavoriteController extends GetxController {

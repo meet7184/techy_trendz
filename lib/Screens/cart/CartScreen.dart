@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:techytrendz/Screens/dashboar/MainScreen.dart';
 import 'package:techytrendz/Utils/ColorScheme.dart';
-import 'package:techytrendz/Utils/app_controller.dart';
+import 'package:techytrendz/util/app_controller.dart';
 import '../../Utils/HeaderPart.dart';
 import '../../Utils/PageIndex.dart';
 import '../../Utils/Responsive.dart';

@@ -5,7 +5,7 @@ import 'package:get_it/get_it.dart';
 import 'package:techytrendz/Models/banner_model.dart';
 import 'package:techytrendz/Screens/home/model/top_rated_products_model.dart';
 import 'package:techytrendz/Screens/home/model/shop_by_category_model.dart';
-import 'package:techytrendz/Utils/global.dart';
+import 'package:techytrendz/util/global.dart';
 import '../../drawer/controller/drawer_data_controller.dart';
 import '../../drawer/model/drawer_list_model.dart';
 import '../../../core/repository/user_repository.dart';

@@ -7,7 +7,7 @@ import 'package:techytrendz/Utils/ColorScheme.dart';
 import 'package:techytrendz/Utils/FooterPart.dart';
 import 'package:techytrendz/Utils/HeaderPart.dart';
 import 'package:techytrendz/Utils/Responsive.dart';
-import 'package:techytrendz/Utils/global.dart';
+import 'package:techytrendz/util/global.dart';
 import '../drawer/products_detail_screen.dart';
 import 'widget/carouselwithindicator.dart';
 

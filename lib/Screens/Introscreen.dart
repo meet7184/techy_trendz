@@ -4,7 +4,7 @@ import 'package:techytrendz/Screens/login/Loginscreen.dart';
 import 'package:techytrendz/Utils/ColorScheme.dart';
 
 import '../Utils/Responsive.dart';
-import '../Utils/app_prefs.dart';
+import '../util/app_prefs.dart';
 import '../Utils/t_key.dart';
 
 class OnBoardingScreen extends StatefulWidget {

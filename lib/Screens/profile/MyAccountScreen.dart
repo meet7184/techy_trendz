@@ -5,12 +5,12 @@ import 'package:get_it/get_it.dart';
 import 'package:techytrendz/Screens/login/Loginscreen.dart';
 import 'package:techytrendz/Utils/ColorScheme.dart';
 import 'package:techytrendz/Utils/HeaderPart.dart';
-import 'package:techytrendz/Utils/app_controller.dart';
+import 'package:techytrendz/util/app_controller.dart';
 
 import '../../Utils/PageIndex.dart';
 import '../../Utils/Responsive.dart';
-import '../../Utils/app_prefs.dart';
-import '../../Utils/global.dart';
+import '../../util/app_prefs.dart';
+import '../../util/global.dart';
 import '../dashboar/MainScreen.dart';
 
 class MyAccountScreen extends StatefulWidget {

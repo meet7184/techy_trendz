@@ -5,7 +5,6 @@ import '../../Utils/ColorScheme.dart';
 import '../../Utils/Responsive.dart';
 import 'controller/favorite_controller.dart';
 
-//TODO : screen no 1 , 10
 class FavoriteScreen extends StatefulWidget {
   final GlobalKey<ScaffoldState> _scaffoldkey;
   const FavoriteScreen(this._scaffoldkey, {Key? key}) : super(key: key);
@@ -72,17 +71,17 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                         bottom: Responsive.height(2, context)),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                              color: Colors.grey,
-                                              blurRadius:
-                                                  5.0, // soften the shadow
-                                              spreadRadius: 1.0,
-                                            )
-                                          ]),
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(10),
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            color: Colors.grey,
+                                            blurRadius:
+                                                5.0, // soften the shadow
+                                            spreadRadius: 1.0,
+                                          )
+                                        ],
+                                      ),
                                       child: Padding(
                                         padding: EdgeInsets.all(
                                             Responsive.width(2, context)),

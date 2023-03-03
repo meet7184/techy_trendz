@@ -214,9 +214,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ),
                                           ),
                                           SizedBox(
-                                            height:
-                                                Responsive.height(0.6, context),
-                                          ),
+                                              height: Responsive.height(
+                                                  0.6, context)),
                                           Padding(
                                             padding: const EdgeInsets.symmetric(
                                                 horizontal: 8.0),

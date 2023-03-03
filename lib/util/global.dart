@@ -11,7 +11,7 @@ AppController appController = Get.find<AppController>();
 String get getInitialRoute {
   if (GetIt.I.get<AppPrefs>().onBoardingStatus) {
     if (appController.userModel != null) {
-      print("User Model ====> ${appController.userModel}");
+      print("User Model ======> ${appController.userModel}");
       return MainScreen.routeName;
     } else {
       return LoginScreen.routeName;

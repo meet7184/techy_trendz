@@ -38,7 +38,7 @@ class HomeController extends GetxController {
       final response = await userRepo.recommendedProducts();
       recommendedProductsList = response.data;
     } catch (e, stackTrace) {
-      print("=>$e");
+      print("==>$e");
       debugPrintStack(stackTrace: stackTrace);
     } finally {
       isLoading = false;

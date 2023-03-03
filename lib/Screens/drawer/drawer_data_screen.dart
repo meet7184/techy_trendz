@@ -199,20 +199,6 @@ class _DrawerDataScreenState extends State<DrawerDataScreen> {
                                             fit: BoxFit.cover),
                                       ),
                                     ),
-                                    // : ClipRRect(
-                                    //     borderRadius: BorderRadius.circular(11),
-                                    //     child: Container(
-                                    //       height: 115,
-                                    //       width: double.infinity,
-                                    //       decoration: BoxDecoration(
-                                    //         color: Colors.green,
-                                    //         borderRadius:
-                                    //             BorderRadius.circular(11),
-                                    //       ),
-                                    //       child: Image.asset("assets/case.png",
-                                    //           fit: BoxFit.cover),
-                                    //     ),
-                                    //   ),
                                     const SizedBox(height: 15),
                                     Padding(
                                       padding: const EdgeInsets.symmetric(

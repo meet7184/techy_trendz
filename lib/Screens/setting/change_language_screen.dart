@@ -73,10 +73,8 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                         ),
                         Container(
                           decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 1.5,
-                                color: Colors.black,
-                              ),
+                              border:
+                                  Border.all(width: 1.5, color: Colors.black),
                               borderRadius: BorderRadius.circular(10)),
                           padding: const EdgeInsets.all(10),
                           child: Row(

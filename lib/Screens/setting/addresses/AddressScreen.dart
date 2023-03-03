@@ -88,9 +88,7 @@ class _AddressScreenState extends State<AddressScreen> {
                               fontFamily: "latosemibold",
                             ),
                           ),
-                          SizedBox(
-                            height: Responsive.height(1.5, context),
-                          ),
+                          SizedBox(height: Responsive.height(1.5, context)),
                           Text(
                             "The following addresses will be used on the checkout page by default.",
                             textAlign: TextAlign.center,

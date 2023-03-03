@@ -52,10 +52,9 @@ class _ForgetVerificationScreenState extends State<ForgetVerificationScreen> {
                         const Text(
                           "Let's Login For Explore Continues",
                           style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16,
-                            color: Colors.black26,
-                          ),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                              color: Colors.black26),
                         ),
                         const SizedBox(height: 25),
                         Center(

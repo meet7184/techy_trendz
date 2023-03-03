@@ -33,7 +33,7 @@ class LoginController extends GetxController {
       final response = await userRepo.loginVerification(
           emailIdController.text.trim(), passwordController.text.trim(), code);
       GetIt.I.get<AppPrefs>().setUser(response);
-      print("======> $response");
+      print("=======> $response");
       GetIt.I.get<AppPrefs>().setOnBoardingStatus = true;
       // final prefs = await SharedPreferences.getInstance();
       // if (response.userEmail != null) {

@@ -54,22 +54,6 @@ class CustomTextField2 extends StatelessWidget {
     );
   }
 
-  // InputBorder get border {
-  //   switch (textFieldType) {
-  //     case TextFieldType.address:
-  //     case TextFieldType.loginEmailID:
-  //       return OutlineInputBorder(
-  //         borderRadius: BorderRadius.circular(12),
-  //         borderSide: const BorderSide(color: Colors.black26),
-  //       );
-  //     default:
-  //       return UnderlineInputBorder(
-  //         borderRadius: BorderRadius.circular(12),
-  //         borderSide: const BorderSide(color: Colors.black26),
-  //       );
-  //   }
-  // }
-
   int? get maxLength {
     switch (textFieldType) {
       case TextFieldType.phoneNumber:
@@ -111,54 +95,9 @@ class CustomTextField2 extends StatelessWidget {
           size: 19,
         );
       case TextFieldType.updatePasswordField:
-        return const Icon(
-          Icons.lock_outline,
-          color: Colors.black45,
-          size: 19,
-        );
+        return const Icon(Icons.lock_outline, color: Colors.black45, size: 19);
       default:
         return null;
     }
   }
-
-  // Widget? get suffix {
-  //   switch (textFieldType) {
-  //     case TextFieldType.loginEmailID:
-  //       return const Icon(
-  //         Icons.check_circle_rounded,
-  //         color: Color(0xff0188CC),
-  //         size: 20,
-  //       );
-  //     case TextFieldType.updatePasswordField:
-  //       return const Icon(
-  //         Icons.check_circle_rounded,
-  //         color: Color(0xff0188CC),
-  //         size: 20,
-  //       );
-  //     case TextFieldType.emailPassword:
-  //       return GestureDetector(
-  //         onTap: () {},
-  //         child: Padding(
-  //           padding: const EdgeInsets.all(8.0),
-  //           child: Container(
-  //             height: 20,
-  //             width: 60,
-  //             decoration: BoxDecoration(
-  //               border: Border.all(color: const Color(0xff0188CC)),
-  //               color: Colors.blue.shade100,
-  //               borderRadius: BorderRadius.circular(10),
-  //             ),
-  //             child: const Center(
-  //                 child: Text(
-  //               "View",
-  //               style: TextStyle(color: Colors.black, fontSize: 13),
-  //             )),
-  //           ),
-  //         ),
-  //       );
-  //
-  //     default:
-  //       return null;
-  //   }
-  // }
 }

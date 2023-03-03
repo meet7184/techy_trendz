@@ -42,9 +42,7 @@ class _CartScreenState extends State<CartScreen> {
                 ? SingleChildScrollView(
                     child: Column(
                       children: [
-                        SizedBox(
-                          height: Responsive.height(2, context),
-                        ),
+                        SizedBox(height: Responsive.height(2, context)),
                         Column(
                           children: controller.list
                               .asMap()

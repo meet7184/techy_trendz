@@ -89,7 +89,6 @@ class _ShippingaddressState extends State<Shippingaddress> {
                                       MediaQuery.of(context).size.width * 0.04),
                               keyboardType: TextInputType.text,
                               onFieldSubmitted: (value) {},
-                              //This will obscure text dynamically
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(
                                   left: Responsive.width(3, context),

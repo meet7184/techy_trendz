@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:techytrendz/Screens/SuccessFullScreen.dart';
 import 'package:techytrendz/Screens/forget/controller/forget_controller.dart';
+import 'package:techytrendz/widget/common_submit_button.dart';
 
 import '../../Utils/ColorScheme.dart';
 import '../../Utils/Responsive.dart';
 import '../../core/utils/flitter_toast.dart';
+import '../../widget/textFied.dart';
 
 class UpdatePassword extends StatefulWidget {
   const UpdatePassword({Key? key}) : super(key: key);
@@ -15,8 +17,8 @@ class UpdatePassword extends StatefulWidget {
 }
 
 class _UpdatePasswordState extends State<UpdatePassword> {
-  bool passvisible = true;
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  bool hidePassword = true;
   TextEditingController newPasswordcontroller = TextEditingController();
   TextEditingController confirmPasswordcontroller = TextEditingController();
 
@@ -96,91 +98,15 @@ class _UpdatePasswordState extends State<UpdatePassword> {
                             SizedBox(
                               height: Responsive.height(1, context),
                             ),
-                            SizedBox(
-                              child: TextFormField(
-                                validator: (val) => val!.trim().isEmpty
-                                    ? "field required"
-                                    : null,
-                                controller: newPasswordcontroller,
-                                onChanged: (password) {},
-                                keyboardType: TextInputType.text,
-                                cursorColor: Colors.black,
-                                textAlign: TextAlign.start,
-                                obscureText: passvisible,
-                                cursorHeight: Responsive.height(3.5, context),
-                                style: TextStyle(
-                                    fontSize:
-                                        MediaQuery.of(context).size.width *
-                                            0.05),
-                                decoration: InputDecoration(
-                                  hintText: "Enter your Password",
-                                  suffixIcon: Padding(
-                                    padding: const EdgeInsets.only(
-                                        right: 10.0, top: 10, bottom: 10),
-                                    child: Container(
-                                      width: 60.0,
-                                      decoration: BoxDecoration(
-                                        color: appTheame.withOpacity(0.2),
-                                        border: Border.all(
-                                          color: appTheame,
-                                          width: 1.5,
-                                        ),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 5),
-                                      child: InkWell(
-                                        onTap: () {
-                                          setState(() {
-                                            passvisible = !passvisible;
-                                          });
-                                        },
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              passvisible ? "View" : "Hide",
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                  fontSize:
-                                                      MediaQuery.of(context)
-                                                              .size
-                                                              .width *
-                                                          0.035,
-                                                  color: appTheame,
-                                                  fontFamily: "poppinsmedium"),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  prefixIcon: Icon(
-                                    Icons.lock_outline,
-                                    color: appTheame,
-                                    size: 25,
-                                  ),
-                                  hintStyle: TextStyle(
-                                      fontSize:
-                                          MediaQuery.of(context).size.width *
-                                              0.04),
-                                  focusedErrorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: appTheame,
-                                      width: 2,
-                                    ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: appTheame,
-                                      width: 2,
-                                    ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  contentPadding: const EdgeInsets.all(16),
-                                ),
+                            CustomTextField2(
+                              validator: (val) =>
+                                  val!.trim().isEmpty ? "field required" : null,
+                              textFieldType: TextFieldType.updatePasswordField,
+                              textEditingController: newPasswordcontroller,
+                              suffixIcon: Icon(
+                                Icons.check_circle_rounded,
+                                color: Color(0xff0188CC),
+                                size: 20,
                               ),
                             ),
                             SizedBox(height: Responsive.height(2, context)),
@@ -194,100 +120,48 @@ class _UpdatePasswordState extends State<UpdatePassword> {
                             SizedBox(
                               height: Responsive.height(1, context),
                             ),
-                            SizedBox(
-                              child: TextFormField(
-                                validator: (val) => val!.trim().isEmpty
-                                    ? "field required"
-                                    : val.trim() ==
-                                            newPasswordcontroller.text.trim()
-                                        ? null
-                                        : "password not match",
-                                controller: confirmPasswordcontroller,
-                                onChanged: (password) {},
-                                keyboardType: TextInputType.text,
-                                cursorColor: Colors.black,
-                                textAlign: TextAlign.start,
-                                obscureText: passvisible,
-                                cursorHeight: Responsive.height(3.5, context),
-                                style: TextStyle(
-                                    fontSize:
-                                        MediaQuery.of(context).size.width *
-                                            0.05),
-                                decoration: InputDecoration(
-                                  hintText: "Enter your Password",
-                                  suffixIcon: Padding(
-                                    padding: const EdgeInsets.only(
-                                        right: 10.0, top: 10, bottom: 10),
-                                    child: Container(
-                                      width: 60.0,
-                                      decoration: BoxDecoration(
-                                        color: appTheame.withOpacity(0.2),
-                                        border: Border.all(
-                                          color: appTheame,
-                                          width: 1.5,
-                                        ),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 5),
-                                      child: InkWell(
-                                        onTap: () {
-                                          setState(() {
-                                            passvisible = !passvisible;
-                                          });
-                                        },
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              passvisible ? "View" : "Hide",
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                  fontSize:
-                                                      MediaQuery.of(context)
-                                                              .size
-                                                              .width *
-                                                          0.035,
-                                                  color: appTheame,
-                                                  fontFamily: "poppinsmedium"),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                            CustomTextField2(
+                              validator: (val) => val!.trim().isEmpty
+                                  ? "field required"
+                                  : val.trim() ==
+                                          newPasswordcontroller.text.trim()
+                                      ? null
+                                      : "password not match",
+                              textFieldType: TextFieldType.emailPassword,
+                              textEditingController: confirmPasswordcontroller,
+                              obscureText: hidePassword,
+                              suffixIcon: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    hidePassword = !hidePassword;
+                                  });
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    height: 20,
+                                    width: 60,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: const Color(0xff0188CC)),
+                                      color: Colors.blue.shade100,
+                                      borderRadius: BorderRadius.circular(10),
                                     ),
+                                    child: const Center(
+                                        child: Text(
+                                      "View",
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 13),
+                                    )),
                                   ),
-                                  prefixIcon: Icon(
-                                    Icons.lock_outline,
-                                    color: appTheame,
-                                    size: 25,
-                                  ),
-                                  hintStyle: TextStyle(
-                                      fontSize:
-                                          MediaQuery.of(context).size.width *
-                                              0.04),
-                                  focusedErrorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: appTheame,
-                                      width: 2,
-                                    ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: appTheame,
-                                      width: 2,
-                                    ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  contentPadding: const EdgeInsets.all(16),
                                 ),
                               ),
                             ),
                             SizedBox(
                               height: Responsive.height(5, context),
                             ),
-                            InkWell(
+                            CommonSubmitButton(
+                              text: "Update",
                               onTap: () async {
                                 disposeKeyboard();
                                 if (formKey.currentState!.validate()) {
@@ -307,32 +181,6 @@ class _UpdatePasswordState extends State<UpdatePassword> {
                                   }
                                 }
                               },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    color: appTheame,
-                                    borderRadius: BorderRadius.circular(20),
-                                    boxShadow: const [
-                                      BoxShadow(
-                                          color: Colors.grey,
-                                          blurRadius: 10, // soften the shadow
-                                          offset: Offset(0, 5)),
-                                    ]),
-                                width: MediaQuery.of(context).size.width,
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 15.0),
-                                  child: Text(
-                                    "Update",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontSize:
-                                            MediaQuery.of(context).size.width *
-                                                0.053,
-                                        fontFamily: "poppinsmedium",
-                                        color: Colors.white),
-                                  ),
-                                ),
-                              ),
                             ),
                             SizedBox(
                               height: Responsive.height(2, context),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:techytrendz/Screens/login/Loginscreen.dart';
+import 'package:techytrendz/widget/common_submit_button.dart';
 
 import '../Utils/ColorScheme.dart';
 import '../Utils/Responsive.dart';
@@ -83,7 +84,8 @@ class _SuccessFullScreenState extends State<SuccessFullScreen> {
                       SizedBox(
                         height: Responsive.height(5, context),
                       ),
-                      InkWell(
+                      CommonSubmitButton(
+                        text: "Sign In",
                         onTap: () {
                           Navigator.pushReplacement(
                             context,
@@ -92,30 +94,6 @@ class _SuccessFullScreenState extends State<SuccessFullScreen> {
                             ),
                           );
                         },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: appTheame,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: const [
-                                BoxShadow(
-                                    color: Colors.grey,
-                                    blurRadius: 10, // soften the shadow
-                                    offset: Offset(0, 5)),
-                              ]),
-                          width: MediaQuery.of(context).size.width,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 15.0),
-                            child: Text(
-                              "Sign In",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize:
-                                      MediaQuery.of(context).size.width * 0.053,
-                                  fontFamily: "poppinsmedium",
-                                  color: Colors.white),
-                            ),
-                          ),
-                        ),
                       ),
                       SizedBox(
                         height: Responsive.height(2, context),

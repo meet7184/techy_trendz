@@ -5,6 +5,7 @@ import 'package:techytrendz/Screens/login/controller/login_controller.dart';
 import '../../Utils/ColorScheme.dart';
 import '../../Utils/PageIndex.dart';
 import '../../core/utils/flitter_toast.dart';
+import '../../widget/common_submit_button.dart';
 import '../dashboar/MainScreen.dart';
 
 class LoginVerificationScreen extends StatefulWidget {
@@ -104,44 +105,26 @@ class _LoginVerificationScreenState extends State<LoginVerificationScreen> {
                           ],
                         ),
                         const SizedBox(height: 100),
-                        GestureDetector(
-                          onTap: () async {
-                            disposeKeyboard();
-
-                            final response = await controller
-                                .loginVerificationAccount(otpController.text);
-                            if (response) {
-                              print("=======> $response");
-                              PageIndex.currentpageindex = 0;
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const MainScreen(),
-                                ),
-                              );
-                              showToast("Registration was Successfully");
-                            } else {
-                              showToast("otp Wrong");
-                            }
-                          },
-                          child: Container(
-                            height: 50,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: appTheame,
-                              borderRadius: BorderRadius.circular(13),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "Verify",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 17,
-                                    color: Colors.white),
-                              ),
-                            ),
-                          ),
-                        ),
+                        CommonSubmitButton(
+                            text: 'Verify',
+                            onTap: () async {
+                              disposeKeyboard();
+                              final response = await controller
+                                  .loginVerificationAccount(otpController.text);
+                              if (response) {
+                                print("=======> $response");
+                                PageIndex.currentpageindex = 0;
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const MainScreen(),
+                                  ),
+                                );
+                                showToast("Registration was Successfully");
+                              } else {
+                                showToast("otp Wrong");
+                              }
+                            }),
                       ],
                     );
                   }),

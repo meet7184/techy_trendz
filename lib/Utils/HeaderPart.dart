@@ -4,6 +4,7 @@ import 'package:techytrendz/Utils/ColorScheme.dart';
 import 'package:techytrendz/Utils/PageIndex.dart';
 
 import 'Responsive.dart';
+import '../widget/common_text_field.dart';
 
 class HeaderPart extends StatefulWidget {
   final GlobalKey<ScaffoldState> scaffoldkey;
@@ -91,54 +92,14 @@ class _HeaderPartState extends State<HeaderPart> {
               height: Responsive.height(2, context),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: Responsive.width(5, context)),
-              child: SizedBox(
-                child: TextField(
-                  controller: passcontroller,
-                  onChanged: (password) {
-                    if (password.isNotEmpty) {
-                      searcherror = "";
-                      setState(() {});
-                    }
-                  },
-                  keyboardType: TextInputType.text,
-                  cursorColor: Colors.black,
-                  textAlign: TextAlign.start,
-                  cursorHeight: MediaQuery.of(context).size.width * 0.06,
-                  style: TextStyle(
-                      fontSize: MediaQuery.of(context).size.width * 0.04),
-                  decoration: InputDecoration(
-                    hintText: "Search anyting...",
-                    fillColor: Colors.white,
-                    filled: true,
-                    errorText: searcherror,
-                    prefixIcon: const Icon(
-                      Icons.search_rounded,
-                      color: Colors.black26,
-                      size: 25,
-                    ),
-                    hintStyle: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width * 0.04),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                        color: Colors.white,
-                        width: 2,
-                      ),
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                        color: Colors.white,
-                        width: 2,
-                      ),
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    contentPadding: const EdgeInsets.all(16),
-                  ),
-                ),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: CustomTextField(
+                validator: (val) =>
+                    val!.trim().isEmpty ? "field required" : null,
+                textFieldType: TextFieldType.search,
               ),
             ),
+            SizedBox(height: 10),
           ],
         ),
       ),

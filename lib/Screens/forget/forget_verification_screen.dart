@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:techytrendz/Screens/forget/controller/forget_controller.dart';
+import 'package:techytrendz/widget/common_submit_button.dart';
 import '../../Utils/ColorScheme.dart';
 import '../../core/utils/flitter_toast.dart';
 import 'UpdatePassword.dart';
@@ -51,9 +52,10 @@ class _ForgetVerificationScreenState extends State<ForgetVerificationScreen> {
                         const Text(
                           "Let's Login For Explore Continues",
                           style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                              color: Colors.black26),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            color: Colors.black26,
+                          ),
                         ),
                         const SizedBox(height: 25),
                         Center(
@@ -104,7 +106,8 @@ class _ForgetVerificationScreenState extends State<ForgetVerificationScreen> {
                           ],
                         ),
                         const SizedBox(height: 100),
-                        GestureDetector(
+                        CommonSubmitButton(
+                          text: "Verify",
                           onTap: () async {
                             disposeKeyboard();
                             final response =
@@ -119,23 +122,6 @@ class _ForgetVerificationScreenState extends State<ForgetVerificationScreen> {
                               showToast("Registration was Successfully");
                             }
                           },
-                          child: Container(
-                            height: 50,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: appTheame,
-                              borderRadius: BorderRadius.circular(13),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "Verify",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 17,
-                                    color: Colors.white),
-                              ),
-                            ),
-                          ),
                         ),
                       ],
                     );
